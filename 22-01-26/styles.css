@@ -1,0 +1,79 @@
+/* h1{
+    color: blue;
+}
+div{
+    background-color: pink;
+} */
+
+.pranav{
+    color: red;
+}
+
+#raju{
+    color: blue;
+}
+
+.hex_example{
+    /* background-color: #000000; */
+    /* background-color: rgb(154, 93, 93); */
+    background-color: rgb(154, 93, 93);
+}
+
+.block-element{
+    background-color: yellow;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+
+}
+.inline-element{
+    background-color: yellowgreen;
+}
+
+.font-styling{
+    font-size: 64px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.box-model{
+    background-color: pink;
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+.parent{
+    background-color: greenyellow;
+    padding: 10px;
+}
+h1{
+    margin: 0;
+}
+
+
+.heading-2-class{
+    color: pink !important;
+}
+
+#heading-2-id{
+    color: orange;
+}
+
+h2{
+    color: purple;
+}

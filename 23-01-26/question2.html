@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6: Modal Dialog - CSS Only</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 600px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .open-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .open-btn:hover {
+            background: #764ba2;
+        }
+
+        /* Hidden checkbox for modal state */
+        #modalToggle {
+            display: none;
+        }
+
+        /* Backdrop - fixed positioning */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        #modalToggle:checked ~ .modal-backdrop {
+            display: flex;
+            opacity: 1;
+        }
+
+        /* Modal - fixed positioning */
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            z-index: 101;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #modalToggle:checked ~ .modal {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Modal header */
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            color: #333;
+            margin: 0;
+        }
+
+        /* Close button - label styled as button */
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover {
+            color: #333;
+        }
+
+        /* Modal body */
+        .modal-body {
+            padding: 30px 20px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .modal-body p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .modal-body ul {
+            text-align: left;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .modal-body li {
+            margin: 8px 0;
+        }
+
+        /* Modal footer */
+        .modal-footer {
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .modal-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-cancel {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .btn-cancel:hover {
+            background: #d0d0d0;
+        }
+
+        .btn-confirm {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-confirm:hover {
+            background: #764ba2;
+        }
+
+        /* Info section */
+        .info-section {
+            background: #f0f0f0;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .info-section h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .modal {
+                width: 95%;
+                max-width: none;
+            }
+
+            .modal-footer {
+                flex-direction: column;
+            }
+
+            .modal-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hidden checkbox for modal state -->
+    <input type="checkbox" id="modalToggle">
+
+    <div class="container">
+        <h1>📋 Modal Dialog Demo (CSS Only)</h1>
+        <p>Click the button below to open a modal dialog using only HTML and CSS.</p>
+        <label for="modalToggle" class="open-btn">Open Modal</label>
+
+        <div class="info-section">
+            <h3>✨ Pure CSS Modal</h3>
+            <p>This modal is created using HTML checkbox and CSS :checked selector. No JavaScript needed!</p>
+        </div>
+    </div>
+
+    <!-- Modal Backdrop -->
+    <div class="modal-backdrop"></div>
+
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-header">
+            <h2>Important Message</h2>
+            <label for="modalToggle" class="close-btn">×</label>
+        </div>
+        
+        <div class="modal-body">
+            <p>This is a modal dialog created with fixed positioning and pure CSS! No JavaScript involved.</p>
+            <p><strong>Key features demonstrated:</strong></p>
+            <ul>
+                <li>Backdrop uses <code>position: fixed</code> to cover viewport</li>
+                <li>Modal uses <code>position: fixed</code> for centering</li>
+                <li>Modal stays centered even when page scrolls</li>
+                <li>Proper z-index hierarchy (backdrop: 100, modal: 101)</li>
+                <li>Smooth fade-in/fade-out animations</li>
+                <li>Scrollable content if content exceeds viewport height</li>
+                <li>Responsive design for mobile devices</li>
+                <li>Uses CSS :checked selector for state management</li>
+            </ul>
+            <p>The modal can contain any content you want, and it remains fixed on the screen regardless of scrolling.</p>
+        </div>
+
+        <div class="modal-footer">
+            <label for="modalToggle" class="modal-btn btn-cancel">Cancel</label>
+            <label for="modalToggle" class="modal-btn btn-confirm">Confirm</label>
+        </div>
+    </div>
+</body>
+</html>
