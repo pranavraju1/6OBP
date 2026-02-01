@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+  }
+  .container {
+    border: 6px solid black;
+    display: grid;
+    /* height: 800px; */
+    /* grid-template-columns: 100px 200px 300px; */
+    /* grid-template-columns: 200px 200px 200px; */
+    /* grid-template-columns: repeat(3, 400px); */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* grid-template-columns: repeat(3, 200px); */
+    /* grid-template-columns: repeat(3, minmax(400px,1fr)); */
+
+    /* grid-template-rows: 100px 200px 300px; */
+    /* grid-template-rows: repeat(3, 200px); */
+
+    /* grid-template: rows/columns */
+    grid-template: repeat(3, 200px)/repeat(3, 200px);
+
+    /* column-gap: 20px; */
+    /* row-gap: 20px; */
+    /* gap: 20px; */
+    /* gap: row column */
+    /* gap: 40px 20px; */
+
+    /* defualt behaviour */
+    /* justify-items: stretch; */
+    /* justify-items: start; */
+    /* justify-items: end; */
+    /* justify-items: center; */
+
+    /* defualt behaviour */
+    /* align-items: stretch; */
+    /* align-items: start; */
+    /* align-items: end; */
+    /* align-items: center; */
+
+    /* place-items: center; */
+    /* place-items: align-items justify-items */
+    /* place-items: start end; */
+
+    /* defualt behaviour */
+    /* justify-content: start; */
+    /* justify-content: end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /* defualt behaviour */
+    /* align-content: start;     */
+    /* align-content: end;     */
+    /* align-content: center;     */
+    /* align-content: space-between;     */
+    /* align-content: space-around;     */
+    /* align-content: space-evenly;     */
+
+    /* place-content:  align-content justify-content*/
+    /* place-content: start end */
+
+
+
+    /* default behaviour */
+    /* grid-auto-flow: row; */
+    /* grid-auto-flow: column; */
+    /* grid-auto-columns: 300px; */
+    /* grid-auto-rows: 200px; */
+
+  }
+  .grid-item {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+
+  }
+  .item-1 {
+    background-color: #b4bf35;
+    /* grid-column-start: 2; */
+    /* grid-column-start: span 3; */
+    /* grid-row-start: 2; */
+    /* grid-row-start: span 2; */
+
+    /* grid-column-end: 4; */
+
+    /* justify-self: center; */
+    /* align-self: center; */
+    /* justify-self: center; */
+    /* align-self: center; */
+
+    /* place-self: align-self justify-self  */
+    place-self: start end;
+
+  }
+  .item-2 {
+    background-color: #b95f21;
+  }
+  .item-3 {
+    background-color: #1c4c56;
+  }
+  .item-4 {
+    background-color: #cfb276;
+  }
+  .item-5 {
+    background-color: #6b0803;
+  }
+  .item-6 {
+    background-color: #cfb276;
+  }
+  .item-7 {
+    background-color: #b95f21;
+  }
+  .item-8 {
+    background-color: #01243a;
+  }
+  .item-9 {
+    background-color: #aad041;
+  }

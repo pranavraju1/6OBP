@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+}
+.container {
+    border: 6px solid black;
+    display: flex;
+    height: 600px;
+    /* flex-direction: column; */
+    /* height: 700px; */
+    /* flex-direction: column; */
+
+    /* flex-direction: column-reverse; */
+    /* height: 600px; */
+
+    /* default behaviour */
+    /* flex-wrap: nowrap; */
+    
+    /* flex-wrap: wrap; */
+
+    /* defualt behaviour */
+    /* flex-flow: row wrap; */
+
+    /* row-gap: 20px; */
+    /* gap: 20px; */
+
+    /* defalut behaviour */
+    /* justify-content: flex-start; */
+
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /* default behavious */
+    /* align-items: stretch; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+
+
+    /* default behaviour */
+    /* align-content: stretch; */
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: space-around; */
+
+    /* align-items: center; */
+
+}
+.flex-item {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    
+    /* defualt behaviour */
+    /* align-self: stretch; */
+
+    /* align-self:flex-start; */
+    /* align-self:flex-end; */
+    /* align-self:center; */
+    /* align-self: auto; */
+
+}
+.item-1 {
+    background-color: #B4BF35;
+    /* flex-grow: 3; */
+
+
+    /* defualt value */
+    /* flex-shrink: 1; */
+
+    /* defualt value */
+    /* flex-grow: 0; */
+}
+.item-2 {
+    background-color: #B95F21;
+    flex-grow: 1;
+}
+.item-3 {
+    background-color: #1C4C56;
+    /* order: 1; */
+}
+.item-4 {
+    background-color: #CfB276;
+    /* order: 2; */
+
+    flex-shrink: 4;
+}
+.item-5 {
+    background-color: #6B0803;
+    /* order: 2; */
+}
+.item-6 {
+    background-color: #1C4C56;
+}
+.item-7 {
+    background-color: #B95F21;
+}
+.item-8 {
+    background-color: #01243A;
+}
+.item-9 {
+    background-color: #AAD041;
+}
