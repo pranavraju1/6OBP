@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .anchor_element:link{
+            color: green;
+        }
+
+
+
+        .anchor_element:active{
+            color: black;
+            border: 2px solid green;
+            background-color: white;
+        }
+
+        .p_element:hover{
+            color: red;
+            cursor: pointer;
+        }
+
+
+        /* ul li:first-child{
+            background-color: aqua;
+        }
+
+        ul li:last-child{
+            background-color: yellowgreen;
+        } */
+
+        /* 2n+b */
+        ul li:nth-child(2n){
+            background-color: orange;
+        }
+
+        .para_element::first-letter{
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .para_element::first-line{
+            background-color: aqua;
+        }
+
+        h1::before{
+            content: "this is before content"
+        }
+
+        .required::after{
+            content: "*";
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Psuedo class elements</h1>
+        <p class="p_element">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, aperiam.</p>
+        <p class="para_element">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus officia fugiat inventore modi aspernatur odit, reprehenderit, animi vero architecto, ipsam veritatis? Debitis corrupti, qui tempore ipsum in dolorem quod minus porro cum nostrum voluptatum nihil totam sequi aspernatur quaerat? Esse culpa deserunt, alias laborum, similique pariatur a laboriosam aliquam quas libero quaerat eius nobis officia sed. Architecto sunt nostrum accusantium nesciunt laboriosam placeat, tempore doloremque unde? Qui aspernatur unde reprehenderit. Laborum aperiam id dolorem sunt pariatur placeat maxime expedita vel ab. Ipsam adipisci illum dignissimos provident libero nam officiis eum maxime cumque! Architecto aperiam quae facere, exercitationem dignissimos soluta! Voluptates?</p>
+        <a class="anchor_element" href="">Some link</a>
+
+        <ul>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+        </ul>
+
+        <ul>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+            <li>asdasdasdasdasdaweqweqweqwe</li>
+        </ul>
+
+        <form action="">
+            <label for="name" class="required">Name</label>
+            <input type="text" placeholder="enter value" id="name">
+        </form>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
