@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li id="third-child">3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+
+        <ul>
+            <li>abcdasdasd</li>
+            <li>abcd</li>
+            <li>abcd</li>
+            <li>abcd</li>
+            <li>abcd</li>
+        </ul>
+
+    </div>
+
+    <script>
+        const parent = document.querySelector('ul');
+        
+        // this gives you html collection
+        console.log(parent.children)
+
+        console.log(parent.children[0].innerText)
+
+        console.log(parent.firstChild)
+
+        console.log(parent.lastChild)
+
+        const thirdChild = document.querySelector('#third-child');
+
+        // used to target the parent element
+        console.log(thirdChild.parentElement);
+
+        // next sibling
+        console.log(thirdChild.nextElementSibling)
+
+        console.log("Nodes", parent.childNodes)
+
+
+
+    </script>
+</body>
+</html>

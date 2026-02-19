@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color: #222;
+    --secondary-text-color: #444;
+    --card-backgroung-color: #fff;
+    --backgroung-color: #eee;
+    --default-margin: 30px;
+}
+
+.dark{
+    --primary-text-color: #fff;
+    --secondary-text-color: #ddd;
+    --card-backgroung-color: #333;
+    --backgroung-color: #111;
+}
+
+.container{
+    min-height: 100vh;
+    padding: 40px;
+    background-color: var(--backgroung-color);
+    border-radius: var(--default-margin);
+}
+
+h2{
+    color: var(--primary-text-color);
+    margin-bottom: var(--default-margin);
+    background-color: var(--backgroung-color);
+}
+
+p{
+    color: var(--secondary-text-color);
+}

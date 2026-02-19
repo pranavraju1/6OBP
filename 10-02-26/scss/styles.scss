@@ -1,0 +1,49 @@
+// nav {
+//     ul {
+//       margin: 0;
+//       padding: 0;
+//       list-style: none;
+//     }
+  
+//     li { 
+//         display: inline-block; 
+//         background-color: aqua; 
+//     }
+  
+//     a {
+//       display: block;
+//       padding: 6px 12px;
+//       text-decoration: none;
+//       color: red;
+//     }
+//   }
+
+// $primaryBtn: rgb(0, 255, 13);
+
+// .btn1{
+//     background-color: $primaryBtn;
+// }
+
+// .btn2{
+//     background-color: $primaryBtn;
+// }
+
+// @import './header.scss';
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+}
+
+header{
+    @include flexCenter();
+    background-color: lightblue;
+    button{
+        background-color: aqua;
+        &:hover{
+            background-color: red;
+        }
+    }
+}

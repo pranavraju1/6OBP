@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    height: calc(100vh - 50px);
+    width: 100%;
+    /* background-color: paleturquoise; */
+    display: flex;
+}
+
+.banner{
+    height: 100%;
+    width: 55%;
+    /* background-color: pink; */
+    background-image: url('./assets/twitter-banner.png');
+    background-position: center;
+}
+
+.sign-up-section{
+    height: 100%;
+    width: 45%;
+    /* background-color: blanchedalmond; */
+    margin-left: 20px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 50px;
+    background-color: white;
+}
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+}
+.twiter-logo{
+    height: 41px;
+    width: 50px;
+    
+}
+.heading{
+    font-size: 84px;
+    font-weight: bold;
+    line-height: 1;
+}
+.join_twiter{
+    font-size: 42px;
+    font-weight: bold;   
+}
+
+.signup_button{
+    background-color: white;
+    width: 500px;
+    height: 70px;
+    border-radius: 30px;
+    border: 2px solid rgba(128, 128, 128, 0.574);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.sing_up_text{
+    font-size: 20px;
+}
+
+.blue_text{
+    color: rgb(0, 183, 255);
+}

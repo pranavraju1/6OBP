@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select name="" id="">
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+    </select>
+
+    <script>
+
+        const arr = ["mon", "tues", "wed", "thrus", "fri", "sat", "sun"]
+
+        const optionElements = document.querySelectorAll("option");
+        optionElements.forEach((ele, i)=>{
+            ele.innerText = arr[i];
+            // ele.setAttribute('value', arr[i])
+        })
+        console.log(optionElements)
+    </script>
+</body>
+</html>

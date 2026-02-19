@@ -1,0 +1,18 @@
+header {
+    background-color: lightblue;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: red;
+  }
+  
+  header button {
+    background-color: aqua;
+  }
+  
+  header button:hover {
+    background-color: red;
+  }

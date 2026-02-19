@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+    <section class="home-page ">
+        <nav class="navbar container navbar-expand-lg py-3">
+            <div class="container-fluid">
+              <a class="navbar-brand d-flex justify-content-center align-items-center gap-3" href="#">
+                <img src="assets/logo-site.png" alt="">
+                <div class="text-primary fw-bold">RENTCARS</div>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-around w-100">
+                    <div class="d-flex">
+                        <li class="nav-item">
+                          <a class="nav-link " aria-current="page" href="#">Become a renter</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Rental deals</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">How it work</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Why choose us</a>
+                        </li>
+              
+                    </div>
+
+                </ul>
+                <form class="d-flex gap-3" role="search">
+                  <a href="./index-page.html" class="btn signup-btn" type="submit">Go to Main page</a>
+                  <button class="btn btn-primary signup-btn" type="submit">Sign up</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+        <div class="home-section container p-0  w-100 d-flex flex-column pb-3">
+            <div class="d-flex w-100 h-100">
+                <div class="find-book h-100 d-flex justify-content-center align-items-center">
+                    <div class="d-flex flex-column gap-3 fw-semibold find-text">
+                        <div>
+                            Find, book and
+                        </div>
+                        <div>
+                            rent a car <span class="text-primary">Easily</span> 
+                        </div>
+                        <div class="fs-5 fw-normal find-text-down">Get a car wherever and whenever you <br> need it with your IOS and Android device.</div>
+                        <div class="d-flex gap-4">
+                            <img src="/assets/google-play.png" alt="">
+                            <img src="/assets/apple-play.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-100 car-banner d-flex d-md-flex d-none justify-content-center align-items-center">
+                    <img src="./assets/car-banner.png" class="car-banner-img " alt="">
+                </div>
+            </div>
+
+            <div class=" card px-4 mb-2 home-down">
+                <div class="row">
+                    <div class="col-lg-3 p-3">
+                        <div class="w-100 h-100 d-flex gap-3">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                  </svg>
+                            </div>
+                              <div class="d-flex flex-column">
+                                <div class="fw-semibold fs-5">Location</div>
+                                <div class="text-secondary">Search your location</div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  p-3">
+                        <div class="w-100 h-100 d-flex gap-3">
+                            <div class="divider d-md-block d-none"></div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
+                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
+                                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                                  </svg>
+                            </div>
+                              <div class="d-flex flex-column">
+                                <div class="fw-semibold fs-5">Pickup date</div>
+                                <div class="text-secondary">Tue 15 Feb, 09:00</div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  p-3">
+                        <div class="w-100 h-100 d-flex gap-3">
+                            <div class="divider d-md-block d-none"></div>
+
+                            <div class="d-flex justify-content-center align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
+                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
+                                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                                  </svg>
+                            </div>
+                              <div class="d-flex flex-column">
+                                <div class="fw-semibold fs-5">Return date</div>
+                                <div class="text-secondary">Thu 16 Feb, 11:00</div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  p-3 d-flex justify-content-md-end justify-content-center">
+                        <div class="btn btn-primary h-100 w-75 d-flex justify-content-center align-items-center serch-btn">Search</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

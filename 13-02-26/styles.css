@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.home-page{
+    height: 100vh;
+    width: 100vw;
+    border: 2px solid red;
+    background-image: url('/assets/pattern.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.navbar{
+    background-color: transparent !important;
+}
+.signup-btn{
+    width: 150px;
+    height: 50px;
+}
+.home-section{
+    height: calc(100% - 82px);
+}
+.find-book{
+    width: 40%;
+}
+
+.find-text{
+    font-size: 48px;
+    line-height: 1;
+}
+.find-text-down{
+    line-height: 1.5;
+}
+
+.car-banner{
+    width: 60%;
+}
+.car-banner-img{
+    position: absolute;
+    right: 0px;
+}
+.home-down{
+    border-radius: 30px !important;
+    margin-inline: auto;
+    width: 90%;
+}
+
+.divider{
+    height: 100%;
+    width: 1px;
+    background-color: rgba(128, 128, 128, 0.627);
+}
+.serch-btn{
+    border-radius: 15px !important;
+}
+
+.footer{
+    height: 100vh;
+    width: 100%;
+    /* background-color: pink; */
+}
+.footer-top-left{
+    background-image: url('./assets/footer-bg.png');
+    background-position: left;
+    background-repeat: no-repeat;
+}
