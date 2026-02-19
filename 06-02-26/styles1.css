@@ -1,0 +1,50 @@
+.container{
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+    margin: 80px auto;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: purple;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* scale(1) is default */
+    /* transform: scale(1.5); */
+    /* transform: scaleX(2); */
+    /* transform: scaleY(2); */
+    /* transform: scaleZ(3); */
+    /* transform: scale(0.5); */
+    /* transform: scale(2,3); */
+
+    /* transform: skew(20deg); */
+    /* transform: skewX(40deg); */
+    /* transform: skewY(40deg); */
+
+    /* transform: translate(40px); */
+    /* transform: translate(30%);
+    transform: translate(30px, 30px);
+    transform: translate(50%, 50%);
+    transform: translate(-30px, -30px); */
+
+    /* transform: rotate(90deg);
+    transform: rotate(180deg);
+    transform: rotateX(80deg);
+    transform: rotateY(80deg); */
+
+    /* transform: scale(2) rotate(45deg) translate(50%,50%); */
+  
+    /* transform: rotate(45deg); */
+    /* transform-origin: left; */
+    /* transform: scale(2); */
+    /* transform-origin: top left; */
+
+    
+
+
+}

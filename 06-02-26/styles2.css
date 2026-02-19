@@ -1,0 +1,22 @@
+.box{
+    margin: 100px auto;
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    /* transition: 1s; */
+    transition-duration: 1s;
+    /* transition-property: background-color; */
+    /* transition-property: background-color, border-radius; */
+    /* transition-delay: 2s; */
+    
+    /* transition-timing-function: linear(0 0%, 0.13 57.05%, 0.73 29.27%, 1 100%); */
+
+
+}
+
+.box:hover{
+    /* background-color: black; */
+    /* border-radius: 50%; */
+    /* transform: scale(2); */
+    transform: rotate(360deg);
+}

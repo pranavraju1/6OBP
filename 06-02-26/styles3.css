@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    background-color: plum;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+
+    /* animation-name: circle; */
+    /* animation-duration: 1s; */
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: infinite; */
+    /* animation-direction: reverse; */
+
+    animation: circle 1s linear 0s infinite;
+    border-radius: 50%;
+}
+
+.dots{
+    display: flex;
+    gap: 20px;
+}
+.dot{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    animation: dotanimation 1s ease-in 0s infinite;
+}
+
+.dot:nth-child(2){
+    animation-delay: 0.1s ;
+}
+.dot:nth-child(3){
+    animation-delay: 0.2s ;
+}
+.dot:nth-child(4){
+    animation-delay: 0.3s ;
+}
+
+@keyframes dotanimation {
+    0%{
+        transform:  translateY(-10px);
+    }
+    50%{
+        transform:  translateY(10px);
+    }
+    100%{
+        transform:  translateY(10px);
+    }
+}
+
+
+
+@keyframes circle{
+    0%{
+        transform: translate(0,0);
+    }
+    25%{
+        transform: translate(200px,0);
+    }
+    50%{
+        transform: translate(200px,200px);
+    }
+    75%{
+        transform: translate(0,200px);
+    }
+}
