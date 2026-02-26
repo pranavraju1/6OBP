@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article id="blog-post">
+        <h2>Welcome to my blog</h2>
+        <div class="ad-banner">BUY NOW!</div>
+        <p>This is a great post about JS.</p>
+        <div class="ad-banner">CLICK HERE!</div>
+        <h2>Conclusion</h2>
+        <a href="#" class="ad-banner">Win a free iPhone</a>
+      </article>
+
+
+      <script>
+        const ad = document.querySelectorAll('.ad-banner');
+        ad.forEach(element=>{
+            element.remove();
+        })
+      </script>
+</body>
+</html>

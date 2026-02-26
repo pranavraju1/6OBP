@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .continer{
+            background-color: pink; 
+            display: flex; 
+            height: 500px; 
+            gap: 10px; 
+            padding: 10px;
+            align-items: end;
+        }
+        .bars{
+            background-color: purple; 
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="continer">
+        <!-- <div class="bars">
+            <h3>20</h3>
+        </div>
+        <div class="bars">
+            <h3>20</h3>
+        </div> -->
+        
+        
+    </div>
+
+    <script>
+        // here max value is 100
+        const data = [10, 40, 20, 100, 50, 80, 75];
+        
+        const continer =  document.querySelector('.continer');
+
+        for(let i=0; i<data.length; i++){
+            let div = document.createElement('div');
+            div.className = "bars";
+            let h3 = document.createElement('h3');
+            h3.innerText = data[i];
+
+            div.style.height = `${data[i]}%`
+
+            div.appendChild(h3);
+
+            
+            continer.appendChild(div)
+        }
+
+
+    </script>
+</body>
+</html>

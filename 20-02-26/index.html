@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .active{
+           font-weight: bold;
+           color: blue;
+        }
+        .nav-elements{
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- <ul>
+        <li class="main apple banana" id="cat">cat</li>
+        <li class="main" id="dog">dog</li>
+        <li class="main">zabra</li>
+        <li class="main">snake</li>
+    </ul> -->
+    
+
+    <!-- <div style="display: flex; gap: 20px;">
+        <div class="nav-elements">Home</div>
+        <div class="nav-elements">About</div>
+        <div class="nav-elements">Hero</div>
+        <div class="nav-elements">Footer</div>
+    </div> -->
+
+
+
+
+    <div class="box"></div>
+
+    <input type="text" name="" id="text" >
+    <h1></h1>
+    <button>enter</button>
+
+
+    <script>
+        const text = document.querySelector("#text");
+        const h1 =  document.querySelector("h1");
+        const button = document.querySelector("button");
+        let userInput
+        text.addEventListener('input',(e)=>{
+            userInput = e.target.value 
+        })
+
+        button.addEventListener('click', handleClick);
+
+        function handleClick(e){
+            h1.innerText = userInput
+        }
+
+   
+
+        // const box = document.querySelector('.box')
+        // box.addEventListener('mouseenter',(e)=>{
+        //     e.target.style.backgroundColor = "purple"
+        // })
+        // box.addEventListener('mouseleave',(e)=>{
+        //     e.target.style.backgroundColor = "blue"
+        // })
+    </script>
+
+
+
+
+
+
+
+    <!-- <script>
+
+        const navElements = document.querySelectorAll(".nav-elements");
+
+        // looping to attach event listner
+        navElements.forEach(item1=>{
+            
+            //attaching eventlistner to each element 
+            item1.addEventListener('hover',(e)=>{
+            
+                // looping to remove each active class form nav-elements
+                // navElements.forEach(item2=>{
+                //     item2.classList.remove("active");
+                // })
+                
+                // attaching the active class to the target
+                e.target.classList.add("active")
+            })
+        })
+
+
+
+
+
+
+
+
+
+        // const li = document.querySelectorAll("li");
+        // li.forEach(item=>{
+        //     item.addEventListener('click', (e)=>{
+        //         if(e.target.style.color == 'red'){
+        //             e.target.style.color=''
+        //         }else{
+        //             e.target.style.color = "red"
+        //         }
+        //     })
+        // })
+
+        // li.forEach(item=>{
+        //     item.addEventListener('click', (e)=>{
+        //         // e.target.classList.toggle("active")
+        //         if(e.target.classList.contains("active")){
+        //             e.target.classList.remove("active")
+        //         }else{
+        //             e.target.classList.add("active")
+
+        //         }
+        //     })
+        // })
+
+
+
+        // const li = document.querySelector("li");
+        // li.classList.add("pranav")
+        // console.log(li.classList)
+        // li.classList.remove("pranav")
+        // console.log(li.classList)
+
+    </script> -->
+
+
+    <script>
+
+
+        //event
+        //an event is a signal or a call that the browser gives when something happens on the web page
+        // eg mouse click, hover, key press etc
+
+        // some of the commen DOM events are
+        // 1.click
+        // 2.dblclick
+        // 3.mouseenter/mouseleave
+        // 4.keydown/keyup
+        // 5.submit
+        // 6.input
+
+        // const cat = document.querySelector('#cat');
+
+        // cat.onclick = function(){
+        //     console.log("cat")
+        // }
+
+
+        // prefered method
+        // cat.addEventListener('click',()=>{
+        //     console.log("cat")
+        // })
+
+        // addEventListener also accepts 3rd arg
+        // which defines the event propogation
+        // by default its false
+        // cat.addEventListener('click',()=>{
+        //     console.log("cat")
+        // }, false);
+
+        // e is event here
+        // it containes values like
+        // type, timestamp, target, srcElement, clientX, clientY
+        // cat.addEventListener('click',(e)=>{
+        //     console.log(e)
+        // })
+
+
+
+
+    </script>
+</body>
+</html>
