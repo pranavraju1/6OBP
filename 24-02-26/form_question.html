@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Registration Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom styles -->
+  <style>
+    .error {
+      color: red;
+      font-size: 0.875em;
+      margin-top: 0.25rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <h2>Student Registration Form</h2>
+    <form id="registrationForm" class="mt-4">
+      <!-- Name -->
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name *</label>
+        <input type="text" class="form-control" id="fullName" name="fullName" />
+        <div id="nameError" class="error">Name is required.</div>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email *</label>
+        <input type="email" class="form-control" id="email" name="email" />
+        <div id="emailError" class="error">Please enter a valid email.</div>
+      </div>
+
+      <!-- Phone -->
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number *</label>
+        <input type="text" class="form-control" id="phone" name="phone" />
+        <div id="phoneError" class="error">Phone must be 10 digits.</div>
+      </div>
+
+      <!-- Age -->
+      <div class="mb-3">
+        <label for="age" class="form-label">Age *</label>
+        <input type="number" class="form-control" id="age" name="age" />
+        <div id="ageError" class="error">Age must be between 16 and 60.</div>
+      </div>
+
+      <!-- Gender -->
+      <div class="mb-3">
+        <label class="form-label">Gender *</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="male" value="male" />
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="female" value="female" />
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+        <div id="genderError" class="error">Please select a gender.</div>
+      </div>
+
+      <!-- Course -->
+      <div class="mb-3">
+        <label for="course" class="form-label">Course *</label>
+        <select class="form-select" id="course" name="course">
+          <option value="">Select a course</option>
+          <option value="web-dev">Web Development</option>
+          <option value="mobile-dev">Mobile App Development</option>
+          <option value="data-science">Data Science</option>
+          <option value="machine-learning">Machine Learning</option>
+        </select>
+        <div id="courseError" class="error">Please select a course.</div>
+      </div>
+
+      <!-- Skills (checkboxes) -->
+      <div class="mb-3">
+        <label class="form-label">Skills (optional)</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="html" id="skillHtml" name="skills" />
+          <label class="form-check-label" for="skillHtml">HTML</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="css" id="skillCss" name="skills" />
+          <label class="form-check-label" for="skillCss">CSS</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="js" id="skillJs" name="skills" />
+          <label class="form-check-label" for="skillJs">JavaScript</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="react" id="skillReact" name="skills" />
+          <label class="form-check-label" for="skillReact">React</label>
+        </div>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+
+    <hr class="my-5" />
+
+    <!-- Table to display submitted data -->
+    <h4>Registered Students</h4>
+    <table class="table table-striped mt-3" id="studentsTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Course</th>
+          <th>Skills</th>
+        </tr>
+      </thead>
+      <tbody id="studentsTableBody">
+        <!-- Data will be inserted here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS (optional, but good for examples) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+   
+  </script>
+</body>
+</html>
