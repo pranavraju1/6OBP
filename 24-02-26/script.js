@@ -19,6 +19,12 @@ registrationForm.addEventListener('submit', (e)=>{
 
 
 
+    let fileComponent = document.querySelector('#fileComponent');
+    // to access the files in the file component dont use .vale use .files
+    console.log(fileComponent.files.size)
+
+
+
     
 
 
@@ -35,7 +41,7 @@ registrationForm.addEventListener('submit', (e)=>{
         makeTable();
 
     }
-    functionStack();
+    // functionStack();
 
 
     function makeTable(){
@@ -65,8 +71,7 @@ registrationForm.addEventListener('submit', (e)=>{
 
             let td7 = document.createElement('td');
             td7.innerText = item.age ;
-
-
+     
             tr.appendChild(td1)
             tr.appendChild(td2)
             tr.appendChild(td3)
