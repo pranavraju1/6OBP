@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttle</title>
+</head>
+<body>
+    <h1>Throttling Demo</h1>
+
+    <input type="text" id="messageInput" placeholder="Type message here">
+    <button id="sendBtn">Send</button>
+    <p id="result">No message sent yet</p>
+
+    <script>
+        let result = document.getElementById("result");
+        let sendBtn = document.getElementById("sendBtn");
+        let messageInput = document.getElementById("messageInput");
+
+        function throttle(fn, delay){
+            let lastCall = 0;
+            return function(...args){
+                const now = Date.now();
+                if(now - lastCall < delay){
+                    return
+                }
+
+                lastCall = now;
+                return fn(...args)
+            }
+        }
+
+        function sendChatMessage(message){
+            result.textContent = "Sending Message: " + message
+            console.log("Sending Message: " + message)
+        }
+
+        const sendChatMessageWithThrottle = throttle(sendChatMessage, 2000);
+
+        sendBtn.addEventListener('click', ()=>{
+            const message = messageInput.value;
+            sendChatMessageWithThrottle(message)
+        })
+
+
+
+    </script>
+
+
+</body>
+</html>
