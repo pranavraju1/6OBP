@@ -1,0 +1,13 @@
+.container{
+    height: 500px;
+    width: 100%;
+}
+
+.redTheme{
+    background-color: red;
+}
+
+.pinkTheme{
+    background-color: pink;
+}
+
