@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router"
-
+// useNavigate -> Returns a function that lets you navigate in your application
 
 const Home = () => {
 
