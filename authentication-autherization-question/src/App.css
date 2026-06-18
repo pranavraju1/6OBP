@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    min-height: 100vh;
+}
+
+.auth-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 18px;
+    padding: 35px;
+    color: white;
+    box-shadow: 0 20px 45px rgba(0,0,0,.25);
+}
+
+.auth-form h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.auth-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+.auth-form input {
+    margin-top: 8px;
+    padding: 13px 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.auth-form input:focus {
+    box-shadow: 0 0 0 3px rgba(255,255,255,.35);
+    transform: scale(1.02);
+}
+
+.auth-form button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    color: #4f46e5;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.auth-form button:hover {
+    transform: translateY(-2px);
+    background: #f3f4f6;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.auth-form button:active {
+    transform: scale(.98);
+}
+
+.error {
+    background: rgba(255, 99, 99, .18);
+    color: #ffd6d6;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: .9rem;
+}
+
+.password-errors {
+    list-style: none;
+    margin-bottom: 18px;
+    background: rgba(255,255,255,.12);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.password-errors li {
+    color: #ffe08a;
+    font-size: .9rem;
+    margin-bottom: 5px;
+}
+
+.password-errors li::before {
+    content: "⚠ ";
+}
+
+
+
+@media (max-width: 500px) {
+    .auth-form {
+        padding: 25px;
+    }
+
+    .auth-form h1 {
+        font-size: 1.7rem;
+    }
+}
