@@ -1,0 +1,71 @@
+import fs from "fs"
+import imagekit from "../config/imageKit.js"
+import Blog from "../models/Blog.js"
+
+export const addBlog = async(req, res)=>{
+    try{
+        const {title, subTitle, description, category, isPublished} = JSON.parse(req.body.blog);
+        
+        const imageFile = req.file;
+
+        if(!title || !description || !category || !imageFile){
+            return res.json({success: false, message: "Missing fields"})
+        }
+
+        // before uploading we need to convert into a proper format
+        const fileBuffer = fs.readFileSync(imageFile.path);
+
+        // Uploading image in imagekit
+        const response = await imagekit.upload({
+            file: fileBuffer,
+            fileName: imageFile.originalname,
+            folder: "/blogs"
+        })
+
+        // optimizing image/url
+        const optimizedImageUrl = imagekit.url({
+            path: response.filePath,
+            transformation:[
+                {quality: 'auto'},
+                {format: 'webp'},
+                {width: '1280'}
+            ]
+        })
+
+        const image = optimizedImageUrl;
+
+        await Blog.create({title, subTitle, description, category, image ,isPublished});
+        res.json({success: true, message:"Blog created successfully"});
+
+
+    }catch(error){
+        res.json({success: false, message:error.message});
+    }
+}
+
+// getAllblogs -> get all the blogs in Db which have isPublished as true
+export const getAllBlogs = async(req, res)=>{
+    try{
+        const blogs = await Blog.find({isPublished: true});
+        res.json({success: true, blogs})
+    }catch(error){
+        res.json({success: false, message: error.message})
+    }
+} 
+
+// getBlogByID
+export const getBlogByID = async(req, res) => {
+    try{
+        const {blogId} = req.params;
+        const blog = await Blog.findById(blogId)
+        if(!blog){
+            return res.json({success: false, message: "Blog not found"});
+        }
+        res.json({success: true, blog})
+    }catch(error){
+        res.json({success: false, message: error.message})
+    }
+} 
+
+// delteBlogbyId -> you will have id in req.body
+// togglePublish -> you will have id in req.body
