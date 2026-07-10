@@ -1,0 +1,20 @@
+Event Loop summary
+
+the event loop is a C program that orchestrates  or co-ordinates the execution of
+synchronous and async code is Nodejs
+
+it coo-ordinates the execution of callbacks in 6 different queues
+
+they are nextTick, Promise, timer, I/O, check and close Q's
+
+we use process.nextTick() method to Q into the nextTick Q
+we resolve or reject a promise to Q into the Promise Q
+we use setTimeout or setInterval to Q into the Timer Q
+execute an async method to Q into I/O Q
+use setImmidiate function to Q into check Q
+attach close event listners to Q into close Q
+
+the order of execution follows the same order
+
+nextTick and promise queues are executed in between each Q and also in between
+each callback execution in the timer and check queues

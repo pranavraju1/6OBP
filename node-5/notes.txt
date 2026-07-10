@@ -1,0 +1,37 @@
+Node is a  single threaded
+
+no matter how many cores you have, node only uses a single core of your CPU
+
+the is fine for I/O operations but if the code has long running and CPU intensive 
+operations, your application might struggle from a performance point of view
+
+# Cluster module
+the Cluster module enables the creation of child porcesses (also called workers)
+that simultaneously
+
+all created workers shore the same port
+
+the Work is devided between the Workers and a Master
+
+Master is only incharge of the workers
+
+workers are in charge of handling incoming requests, reading files etc
+
+each worker gets its own event loop, memory, and V8 instance
+
+we should only create as many workers as there are CPU cores on th machine the app is running
+if you create more workers than there are logical cores on the computer it can cause an overhead
+as the system will have to schedule all the created workers with fewer no. of cores
+
+
+#   Worker threades module
+
+the worker_threads module enables the use of threads that execute JS in parallel
+code executed in a worker thread runs in a seprate child process, preventing it from blocking your main application
+
+the cluster module can be used to run multiple instances of NodeJS that can distribute workloads
+
+worker_threads module allows running multiple application threads within a single NodeJS instance
+
+When process isolation is not needed that is, no seprate instances of v8, event loop and memory are needed you
+should use worker_threads
